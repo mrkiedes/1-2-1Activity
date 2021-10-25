@@ -14,6 +14,7 @@ xMin = 0
 xMax = 112
 yMin = 0
 yMax = 324
+score = 0
 
 color = "red"
 shape = "triangle"
@@ -28,6 +29,11 @@ t.fillcolor(color)
 #-----game functions--------
 def spot_clicked(x, y):
     t.goto(rand.randint(xMin,xMax), rand.randint(yMin,yMax))
+    scoreChange()
+
+def scoreChange():
+    global score
+    score += 1
 
 
 #-----events----------------
