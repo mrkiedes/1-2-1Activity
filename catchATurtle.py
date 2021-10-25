@@ -7,6 +7,7 @@ The timer updating
 # a121_catch_a_turtle.py
 #-----import statements-----
 import turtle as trtl
+import random as rand
 
 #-----game configuration----
 xMin = 0
@@ -25,11 +26,9 @@ t.turtlesize(size)
 t.fillcolor(color)
 
 #-----game functions--------
-
-
-
 def spot_clicked(x, y):
-    print("IT WORKED!!!!!!!!!")
+    t.goto(rand.randint(xMin,xMax), rand.randint(yMin,yMax))
+
 
 #-----events----------------
 t.onclick(spot_clicked)
